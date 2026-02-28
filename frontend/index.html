@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuoteBot — AI Quote Companion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">Q</div>
+          <span class="logo-text">QuoteBot</span>
+        </div>
+        <p class="sidebar-tagline">Your AI-powered quote companion</p>
+      </div>
+
+      <nav class="category-nav">
+        <p class="nav-label">Categories</p>
+        <button class="category-btn" data-message="Give me a motivational quote">
+          <span class="cat-icon">⚡</span> Motivation
+        </button>
+        <button class="category-btn" data-message="Give me an inspirational quote">
+          <span class="cat-icon">✨</span> Inspiration
+        </button>
+        <button class="category-btn" data-message="Give me a love quote">
+          <span class="cat-icon">❤️</span> Love
+        </button>
+        <button class="category-btn" data-message="Give me a success quote">
+          <span class="cat-icon">🏆</span> Success
+        </button>
+        <button class="category-btn" data-message="Give me a funny quote">
+          <span class="cat-icon">😄</span> Funny
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-indicator">
+          <span class="status-dot" id="statusDot"></span>
+          <span class="status-text" id="statusText">Connecting...</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+
+      <header class="chat-header">
+        <div class="header-info">
+          <div class="avatar">QB</div>
+          <div>
+            <h1 class="header-title">QuoteBot</h1>
+            <p class="header-sub">AI Quote Recommendation Engine</p>
+          </div>
+        </div>
+        <button class="clear-btn" id="clearBtn" title="Clear chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6l-1 14H6L5 6"></path>
+            <path d="M10 11v6"></path>
+            <path d="M14 11v6"></path>
+            <path d="M9 6V4h6v2"></path>
+          </svg>
+        </button>
+      </header>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="welcome-message">
+          <div class="welcome-icon">💬</div>
+          <h2>Welcome to QuoteBot!</h2>
+          <p>Ask me for quotes on motivation, inspiration, love, success, or funny topics. Use the sidebar categories or type your request below.</p>
+          <div class="welcome-chips">
+            <span class="chip" data-message="Hello!">Say hello</span>
+            <span class="chip" data-message="Motivate me">Motivate me</span>
+            <span class="chip" data-message="Make me laugh">Make me laugh</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-avatar">QB</div>
+        <div class="typing-bubble">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <footer class="chat-footer">
+        <div class="input-container">
+          <textarea
+            id="userInput"
+            class="chat-input"
+            placeholder="Ask for a quote... (e.g. 'Inspire me' or 'Make me laugh')"
+            rows="1"
+            maxlength="500"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="footer-hint">Press <kbd>Enter</kbd> to send &nbsp;·&nbsp; <kbd>Shift+Enter</kbd> for new line</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

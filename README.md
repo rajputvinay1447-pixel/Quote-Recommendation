@@ -4,8 +4,8 @@
 
 ```bash
 python -m venv venv
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS/Linux
+venv\Scripts\activate         
+
 
 pip install rasa rasa-sdk
 ```
@@ -18,7 +18,7 @@ rasa train
 
 ## Run
 
-Open **three terminals** inside the project folder (venv activated in each):
+Open three terminals inside the project folder (venv activated in each):
 
 **Terminal 1 — Action Server:**
 ```bash
@@ -34,16 +34,6 @@ rasa run --enable-api --cors "*"
 ```
 Open frontend/index.html in your browser
 ```
-
-## Supported Categories
-
-| Trigger phrase          | Category    |
-|-------------------------|-------------|
-| Give me motivation      | Motivation  |
-| Inspire me              | Inspiration |
-| Love quote please       | Love        |
-| Success quote           | Success     |
-| Make me laugh           | Funny       |
 
 ## Rasa Version
 

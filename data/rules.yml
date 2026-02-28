@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Fallback when NLU confidence is low
+  steps:
+    - intent: nlu_fallback
+    - action: utter_default
+
+- rule: Say goodbye on goodbye intent
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say hello on greet intent
+  steps:
+    - intent: greet
+    - action: utter_greet

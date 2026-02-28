@@ -1,0 +1,135 @@
+version: "3.1"
+
+stories:
+
+- story: greeting flow
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: motivation quote with positive feedback
+  steps:
+    - intent: motivation
+    - action: action_provide_motivation_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: motivation quote with negative feedback
+  steps:
+    - intent: motivation
+    - action: action_provide_motivation_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+
+- story: inspiration quote with positive feedback
+  steps:
+    - intent: inspiration
+    - action: action_provide_inspiration_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: inspiration quote with negative feedback
+  steps:
+    - intent: inspiration
+    - action: action_provide_inspiration_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+
+- story: love quote with positive feedback
+  steps:
+    - intent: love
+    - action: action_provide_love_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: love quote with negative feedback
+  steps:
+    - intent: love
+    - action: action_provide_love_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+
+- story: success quote with positive feedback
+  steps:
+    - intent: success
+    - action: action_provide_success_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: success quote with negative feedback
+  steps:
+    - intent: success
+    - action: action_provide_success_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+
+- story: funny quote with positive feedback
+  steps:
+    - intent: funny
+    - action: action_provide_funny_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: funny quote with negative feedback
+  steps:
+    - intent: funny
+    - action: action_provide_funny_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+
+- story: goodbye flow
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: greet then motivation quote full flow
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: motivation
+    - action: action_provide_motivation_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: greet then success quote and goodbye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: success
+    - action: action_provide_success_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+    - intent: funny
+    - action: action_provide_funny_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+
+- story: multiple quote requests in session
+  steps:
+    - intent: inspiration
+    - action: action_provide_inspiration_quote
+    - action: utter_ask_helpful
+    - intent: deny
+    - action: utter_negative_feedback
+    - intent: love
+    - action: action_provide_love_quote
+    - action: utter_ask_helpful
+    - intent: affirm
+    - action: utter_positive_feedback
+    - intent: goodbye
+    - action: utter_goodbye

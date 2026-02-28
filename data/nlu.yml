@@ -1,0 +1,228 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - good afternoon
+    - hey there
+    - hi there
+    - howdy
+    - greetings
+    - what's up
+    - sup
+    - hello there
+    - hi bot
+    - hey bot
+    - start
+    - begin
+    - hello chatbot
+    - yo
+    - hiya
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see ya
+    - later
+    - take care
+    - farewell
+    - good night
+    - good bye
+    - talk to you later
+    - ttyl
+    - cya
+    - I'm leaving
+    - I'll go now
+    - have a good day
+    - catch you later
+    - so long
+    - I'm done
+    - that's all
+    - thanks bye
+
+- intent: motivation
+  examples: |
+    - give me a motivational quote
+    - I need motivation
+    - motivate me
+    - I'm feeling low, need motivation
+    - share a motivational quote
+    - I need some encouragement
+    - motivational quote please
+    - I want to be motivated
+    - inspire me to keep going
+    - I need a push
+    - give me strength
+    - I feel like giving up, help me
+    - motivation quote
+    - lift my spirits
+    - I need something to keep me going
+    - share some words of encouragement
+    - I'm struggling, motivate me
+    - help me stay motivated
+    - give me energy
+    - I need willpower
+    - keep me going
+    - I need drive
+    - push me forward
+    - fire me up
+
+- intent: inspiration
+  examples: |
+    - give me an inspirational quote
+    - I need inspiration
+    - inspire me
+    - share something inspiring
+    - inspirational quote please
+    - I'm feeling uninspired
+    - give me some inspiration
+    - I need creative inspiration
+    - words of wisdom please
+    - share wisdom
+    - I need to be uplifted
+    - give me something to think about
+    - an inspiring thought
+    - deep quote please
+    - enlighten me
+    - give me insight
+    - thought of the day
+    - something profound
+    - philosophical quote
+    - words to live by
+    - wise words
+    - something meaningful
+    - uplift me
+    - something uplifting
+
+- intent: love
+  examples: |
+    - give me a love quote
+    - share a romantic quote
+    - I need a love quote
+    - love quote please
+    - something about love
+    - romantic quote
+    - quote about relationships
+    - I'm in love, give me a quote
+    - heart touching quote
+    - quote about love and life
+    - beautiful love quote
+    - share something about love
+    - I want a quote for my partner
+    - something sweet about love
+    - affection quote
+    - relationship quote
+    - quote about caring
+    - love is in the air quote
+    - sentimental quote
+    - touching love quote
+    - romantic words
+    - love words
+    - something for my crush
+
+- intent: success
+  examples: |
+    - give me a success quote
+    - quote about success
+    - I want to succeed
+    - success quote please
+    - share something about success
+    - how to be successful
+    - quote about achieving goals
+    - winning quote
+    - achievement quote
+    - quote about hard work
+    - I want to be successful
+    - share success wisdom
+    - quote about persistence
+    - never give up quote
+    - hustle quote
+    - grind quote
+    - goal setting quote
+    - entrepreneurship quote
+    - leadership quote
+    - champion quote
+    - be the best quote
+    - work hard quote
+    - quote about ambition
+    - driven quote
+
+- intent: funny
+  examples: |
+    - give me a funny quote
+    - make me laugh
+    - something funny
+    - funny quote please
+    - share a joke quote
+    - humor me
+    - I need a laugh
+    - give me something hilarious
+    - witty quote
+    - clever quote
+    - sarcastic quote
+    - humorous quote
+    - make me smile
+    - something witty
+    - funny saying
+    - comedy quote
+    - lighten my mood
+    - I need a chuckle
+    - amusing quote
+    - quirky quote
+    - something to cheer me up
+    - crack me up
+    - hilarious quote
+    - fun quote
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - absolutely
+    - of course
+    - definitely
+    - it helped
+    - yes it did
+    - it resonated
+    - that was great
+    - loved it
+    - yes that helped
+    - it was helpful
+    - perfect
+    - great quote
+    - wonderful
+    - amazing
+    - it did
+    - totally
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - didn't help
+    - it didn't
+    - not quite
+    - not for me
+    - no thanks
+    - not helpful
+    - I don't like it
+    - it's not for me
+    - meh
+    - nah
+    - not this one
+    - try another
+    - give me another
+    - something else please
+    - not resonating
+    - not really no
+    - I don't think so

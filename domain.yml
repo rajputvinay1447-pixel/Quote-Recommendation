@@ -1,0 +1,62 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - motivation
+  - inspiration
+  - love
+  - success
+  - funny
+  - affirm
+  - deny
+  - nlu_fallback
+
+slots:
+  last_category:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hey there! I'm QuoteBot, your personal quote companion. What kind of quotes would you like? I have motivation, inspiration, love, success, and funny quotes!"
+    - text: "Hello! Welcome to QuoteBot! I can share quotes on motivation, inspiration, love, success, or funny topics. What would you like today?"
+    - text: "Hi! Great to see you! Tell me what kind of quotes you need — motivation, inspiration, love, success, or funny?"
+
+  utter_goodbye:
+    - text: "Goodbye! May those words stay with you. Take care!"
+    - text: "See you next time! Keep those quotes in your heart. Farewell!"
+    - text: "Until next time! Remember — great words inspire great actions. Bye!"
+
+  utter_ask_helpful:
+    - text: "Did this quote resonate with you?"
+    - text: "Was that quote helpful to you?"
+    - text: "Did that quote speak to you?"
+
+  utter_positive_feedback:
+    - text: "That's wonderful! Great quotes have the power to change perspectives. Feel free to ask for more anytime!"
+    - text: "I'm glad it helped! Wisdom is always here when you need it. Want another quote?"
+    - text: "Fantastic! Words have power. Come back anytime you need inspiration!"
+
+  utter_negative_feedback:
+    - text: "No worries! Let me try another category. Would you like motivation, inspiration, love, success, or funny quotes?"
+    - text: "That's okay! Every quote connects differently. Want to try a different category?"
+    - text: "Understood! Let's find the right words for you. Which category would you like to explore next?"
+
+  utter_default:
+    - text: "I'm not quite sure I understood that. I can share quotes on motivation, inspiration, love, success, or funny topics. What would you like?"
+    - text: "Hmm, I didn't catch that. Try asking for motivation, inspiration, love, success, or funny quotes!"
+    - text: "I'm here to share quotes! Just ask for motivation, inspiration, love, success, or funny quotes."
+
+actions:
+  - action_provide_motivation_quote
+  - action_provide_inspiration_quote
+  - action_provide_love_quote
+  - action_provide_success_quote
+  - action_provide_funny_quote
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
